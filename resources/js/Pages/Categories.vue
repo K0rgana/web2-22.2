@@ -21,9 +21,12 @@ defineProps({
                 <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
                     <div>
                         <h1>categoriazinhas</h1>
+                        <!-- {{categories}} -->
                         <ul>
-                            <li v-for="product of categories" :key="product.id">
-                                {{ product.name }} ({{product.category?.title}})
+                            <li class="m-2 p-2 rounded bg-blue-100">hello</li>
+                            <li class="m-2 p-2 rounded bg-blue-100">hello</li>
+                            <li v-for="categorie of categories" :key="categorie" class="p-2">
+                                {{ categorie.title }} <a>&times;</a>
                             </li>
                         </ul>
                     </div>
