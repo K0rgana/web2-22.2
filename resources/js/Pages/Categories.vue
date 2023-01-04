@@ -2,6 +2,8 @@
 import AuthenticatedLayout from "@/Layouts/AuthenticatedLayout.vue";
 import { Head, useForm } from "@inertiajs/inertia-vue3";
 
+import Button from "@/Components/PrimaryButton.vue";
+
 defineProps({
     categories: [],
 });
@@ -41,7 +43,7 @@ function deleteCategory(id) {
                 >
                     <div>
                         <h1 class="p-2 font-bold">Add a new categorie:</h1>
-                        <!-- {{categories}} -->
+
                         <form v-on:submit.prevent="addCategory()">
                             <input
                                 type="text"
@@ -49,11 +51,7 @@ function deleteCategory(id) {
                                 v-model="form.title"
                                 class="m-2 p-2 rounded bg-grey-100"
                             />
-                            <button
-                                class="m-2 p-2 font-bold rounded bg-blue-100"
-                            >
-                                Add
-                            </button>
+                            <Button> Add </Button>
                             <h1 class="p-2 font-bold">All categories:</h1>
                         </form>
 
